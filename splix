@@ -1051,7 +1051,7 @@ do
         local textbounds = utility:GetTextBounds(name, theme.textsize, theme.font)
         --
         local page_button = utility:Create("Frame", {Vector2.new(position,4), window.back_frame}, {
-            Size = utility:Size(0, textbounds.x+20, 0, 21),
+            Size = utility:Size(0, utility:GetTextBounds(name, theme.textsize, theme.font).X+20, 0, 21),
             Position = utility:Position(0, position, 0, 4, window.back_frame),
             Color = theme.outline
         });page["page_button"] = page_button
